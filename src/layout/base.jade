@@ -1,0 +1,31 @@
+mixin nav(tab)
+	nav.nav
+		.nav-slider
+		ul.nav-list
+			li
+				a.nav-anchor(href="/" class=tab==='home'?'active':'') Home
+			li
+				a.nav-anchor(href="/projects.html" class=tab==='projects'?'active':'') Projects
+			li
+				a.nav-anchor(href="/members.html" class=tab==='members'?'active':'') Members
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+		block description
+			meta(name="description" content="PixelCat「阵列猫」想要改变世界也得先抓耗子啊！")
+		block title
+		link(rel="stylesheet" href="./style.css?t=#{time}")
+	body
+		header.header.ribbon-top
+			.logo
+			a.site-name(href="/") PixelCat「阵列猫」
+		.container.page
+			.main
+				block main
+			footer.footer.
+				&copy; 2016 Feeder EGOIST.
+		script(src="./app.js?t=#{time}")

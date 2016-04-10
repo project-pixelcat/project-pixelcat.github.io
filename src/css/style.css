@@ -1,0 +1,167 @@
+body {
+	font: 16px/1.7 "lucida grande","lucida sans unicode",lucida,"Helvetica Neue",helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	background-color: #f0f0f0;
+}
+
+body, h1, h2, h3, h4, h5, ul {
+	margin: 0;
+}
+
+a {
+	color: #333;
+}
+
+p {
+	margin: 0 0 15px 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.page {
+	background-color: white;
+	box-shadow: 0 1px 1px #ccc;
+	border-radius: 0 0 3px 3px;
+}
+
+.inner {
+	padding: 20px;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background-color: #e2e2e2;
+	margin: 30px 0;
+}
+
+.header {
+	background-color: white;
+	border-bottom: 1px solid #e2e2e2;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	& .logo {
+		height: 30px;
+		line-height: 30px;
+		width: 40px;
+		background-size: cover;
+		position: relative;
+		top: 7px;
+		display: inline-block;
+		background-image: url(./media/pixelcat.gif);
+	}
+	& .site-name {
+		margin-left: 10px;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: 400;
+		display: inline-block;
+		background-color: rgba(255, 255, 255, 0.88);
+		border-radius: 3px;
+		height: 30px;
+		line-height: 30px;
+	}
+}
+
+.nav {
+	overflow: hidden;
+	position: relative;
+	padding: 10px 20px;
+	background-color: #f9f9f9;
+	& .nav-slider {
+		height: 3px;
+		background-color: #8dccff;
+		width: 0;
+		transition: all .3s ease-in-out;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	& .nav-list {
+		padding-left: 0;
+		list-style: none;
+	}
+	& li {
+		float: left;
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+		& a {
+			text-decoration: none;
+	    display: block;
+			border-bottom: 3px solid transparent;
+			color: rgba(0,0,0,.3);
+			&.active, &:hover {
+				color: #333;
+			}
+		}
+	}
+}
+
+.about {
+	& .cat {
+		float: right;
+		margin-left: 10px;
+		background-image: url(./media/nyancat.gif);
+		width: 240px;
+		height: 152px;
+		background-size: cover;
+		background-color: #f9f9f9;
+	}
+	& .about-content {
+		text-align: left;
+	}
+}
+
+.footer {
+	padding: 10px 0;
+	border-top: 1px solid #e2e2e2;
+	margin-top: 80px;
+	font-size: 13px;
+	color: #999;
+	text-align: center;
+}
+
+.info {
+	margin-top: 50px;
+	& .line {
+		overflow: hidden;
+	}
+	& .name {
+		float: left;
+		width: 70px;
+
+	}
+}
+
+.show-on-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background-color: white;
+	}
+	.about {
+		& .cat {
+			width: 80px;
+			height: 50px;
+		}
+	}
+	.page {
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.hide-on-mobile {
+		display: none;
+	}
+	.show-on-mobile {
+		display: block;
+	}
+}
