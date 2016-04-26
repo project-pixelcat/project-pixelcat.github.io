@@ -1,10 +1,15 @@
 extend layout/base
 
 block title
-	title Projects - PixelCat「阵列猫」
+  title Projects - PixelCat「阵列猫」
 
 block main
-	+nav('projects')
-	.inner
-		p PixelCat「阵列猫」的成员虽然个个都高产似母猪但是暂时还没空把作品发到这个页面上来，多多见谅啦！
-		p 最近有很多对 PixelCat「阵列猫」的质疑，看来我们得抓紧上线第一个正式作品了，刚把爹呢！
+  +nav('projects')
+  .inner
+    .projects
+      .project
+        h2.project-name 
+          | Firesize
+          a.url(href="https://github.com/egoist/firesize") https://github.com/egoist/firesize
+        .project-dexcription.
+          即时图片处理服务。

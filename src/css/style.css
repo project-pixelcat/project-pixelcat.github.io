@@ -7,6 +7,15 @@ body, h1, h2, h3, h4, h5, ul {
 	margin: 0;
 }
 
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont,
+               'avenir next', avenir,
+               helvetica, 'helvetica neue',
+               Ubuntu,
+               'segoe ui', arial,
+               sans-serif;
+}
+
 a {
 	color: #333;
 }
@@ -142,6 +151,28 @@ hr {
 
 .show-on-mobile {
 	display: none;
+}
+
+.projects {
+  & .project {
+    & .project-name {
+      & a {
+        font-size: 12px;
+        margin-left: 1rem;
+        color: white;
+        background-color: #999;
+        padding: 5px;
+        border-radius: 3px;
+        text-decoration: none;
+        vertical-align: 4px;
+        font-weight: 400;
+        transition: background-color .3s ease;
+        &:hover {
+          background-color: #778087;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
